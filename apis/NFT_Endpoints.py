@@ -43,7 +43,7 @@ POST -	Takes Required Files for Nft and creates the Nft on blockchain and saves 
 		it can take any number of additional properties in request form data which will be added to NFT metadata as string, for example, power: "100"
 returns :	NftId, TeeResponse
 '''
-def nft_create(api_url, previewFilePath, encryptFilePath, title, description, seed, seriesID="", properties=""):
+def nft_create(api_url, previewFilePath, encryptFilePath, title, description, seed, seriesID="", properties=""): ##not working not tested
 	request = '{0}api/nft/create/{1}'.format(api_url, previewFilePath)
 	response = requests.post(request)
 	return 
